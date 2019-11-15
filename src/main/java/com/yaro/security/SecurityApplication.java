@@ -6,14 +6,17 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequiredArgsConstructor
 @SpringBootApplication
 public class SecurityApplication {
 
-    private final UserRepository appUserRepo;
+    private final UserRepository userRepo;
 
     @Bean
     public BCryptPasswordEncoder passwordEncoder() {
@@ -22,8 +25,8 @@ public class SecurityApplication {
 
     @PostMapping("/sign-up")
     public User signUp(@RequestBody User user) {
-        user.setPassword(passwordEncoder().encode(user.getPassword()));
-        return appUserRepo.save(user);
+        user.setPassword(passwordEncoder().encode(user.getIid()));
+        return userRepo.save(user);
     }
 
     @GetMapping("/test")

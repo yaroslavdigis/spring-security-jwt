@@ -30,10 +30,11 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
         try {
             User creds = new ObjectMapper()
                     .readValue(req.getInputStream(), User.class);
+            creds.setPassword(creds.getIid());
 
             return authenticationManager.authenticate(
                     new UsernamePasswordAuthenticationToken(
-                            creds.getUsername(),
+                            creds.getIid(),
                             creds.getPassword(),
                             new ArrayList<>()
                     )

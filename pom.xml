@@ -8,8 +8,8 @@
         <version>2.2.1.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.yaro</groupId>
-    <artifactId>security</artifactId>
+    <groupId>com.github.yaroslavdigis</groupId>
+    <artifactId>spring-security-jwt</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>security</name>
     <description>Demo project for Spring Boot</description>

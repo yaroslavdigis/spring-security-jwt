@@ -1,4 +1,4 @@
-package com.yaro.security.model;
+package com.github.yaroslavdigis.model;
 
 import lombok.Data;
 import org.springframework.data.annotation.Id;

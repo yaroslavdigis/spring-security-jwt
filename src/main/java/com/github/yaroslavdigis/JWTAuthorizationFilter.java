@@ -1,4 +1,4 @@
-package com.yaro.security;
+package com.github.yaroslavdigis;
 
 import io.jsonwebtoken.Jwts;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import static com.yaro.security.SecurityConstants.*;
+import static com.github.yaroslavdigis.SecurityConstants.*;
 
 public class JWTAuthorizationFilter extends BasicAuthenticationFilter {
 

@@ -1,7 +1,7 @@
-package com.yaro.security;
+package com.github.yaroslavdigis;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.yaro.security.model.User;
+import com.github.yaroslavdigis.model.User;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import lombok.RequiredArgsConstructor;
@@ -18,7 +18,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
 
-import static com.yaro.security.SecurityConstants.*;
+import static com.github.yaroslavdigis.SecurityConstants.*;
 
 @RequiredArgsConstructor
 public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilter {

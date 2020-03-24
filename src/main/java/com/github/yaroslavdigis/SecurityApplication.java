@@ -1,6 +1,6 @@
-package com.yaro.security;
+package com.github.yaroslavdigis;
 
-import com.yaro.security.model.User;
+import com.github.yaroslavdigis.model.User;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

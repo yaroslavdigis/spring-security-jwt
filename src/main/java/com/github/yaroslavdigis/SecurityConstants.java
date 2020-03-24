@@ -1,4 +1,4 @@
-package com.yaro.security;
+package com.github.yaroslavdigis;
 
 class SecurityConstants {
     static final String SECRET = "SecretKeyToGenJWTs";

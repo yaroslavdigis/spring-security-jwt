@@ -1,4 +1,4 @@
-package com.github.yaroslavdigis;
+package com.kekfeed.jwt;
 
 class SecurityConstants {
     static final String SECRET = "SecretKeyToGenJWTs";

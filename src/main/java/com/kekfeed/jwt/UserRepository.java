@@ -1,6 +1,6 @@
-package com.github.yaroslavdigis;
+package com.kekfeed.jwt;
 
-import com.github.yaroslavdigis.model.User;
+import com.kekfeed.jwt.model.User;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 

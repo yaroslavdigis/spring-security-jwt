@@ -1,4 +1,4 @@
-package com.github.yaroslavdigis.model;
+package com.kekfeed.jwt.model;
 
 import lombok.Data;
 import org.springframework.data.annotation.Id;

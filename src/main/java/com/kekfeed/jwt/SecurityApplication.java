@@ -1,6 +1,6 @@
-package com.github.yaroslavdigis;
+package com.kekfeed.jwt;
 
-import com.github.yaroslavdigis.model.User;
+import com.kekfeed.jwt.model.User;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -11,7 +11,7 @@ import java.util.List;
 @Data
 @Document(collection = "memes-batches")
 @TypeAlias("memes-batch")
-class MemesBatch {
+public class MemesBatch {
     @Id
     private String id;
     private Long fromId;

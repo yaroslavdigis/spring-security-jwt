@@ -1,26 +1,19 @@
 package com.kekfeed.jwt.batch;
 
-import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
 
 import static java.lang.String.format;
 import static java.util.Optional.ofNullable;
 
-@RestController
-@RequestMapping("meme-batch")
-@RequiredArgsConstructor
-public class Api {
+public abstract class AbstractMemeBatchApi {
 
-    private static final String MEME_BATCH_RESOURCE_URL = "http://batch-generator-api-service-dev:80/meme/batch/%d/%d";
-    private final RestTemplate restTemplate;
+    protected static final String MEME_BATCH_RESOURCE_URL = "http://batch-generator-api-service-dev:80/meme/batch/%d/%d";
+    @Autowired
+    private RestTemplate restTemplate;
 
-    @GetMapping("/test/{from}/{to}")
-    public MemesBatch testDiscovery(@PathVariable Integer from, @PathVariable Integer to) {
+    protected MemesBatch testDiscovery(Integer from, Integer to) {
         try {
             return ofNullable(
                     restTemplate.postForEntity(
